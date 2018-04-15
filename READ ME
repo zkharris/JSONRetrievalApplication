@@ -1,0 +1,14 @@
+https://github.com/zkharris/JSONRetrievalApplication
+
+The problem was to retrieve information over the network and display it in a RecyclerView. 
+The solution was to create a standard RecyclerView and retrieve the information from the given url 
+as a JSONArray and store those objects into the RecyclerView. My approach was to design the basic 
+layoutfirst and and then handle retrieving the JSON and finally connecting those components and 
+if those steps were done work on polishing the UI. Some trade offs I made were in code 
+optimization. Because ofthe time limit I tried to make everything work before making a particular 
+component more efficient. For example in my RecyclerViewAdapter I used ViewHolders I was familiar 
+with instead of looking for more optimal ways of constructing the adapter. If I had additional 
+time on the project I would work on optimizing the code wherever it applies and polishing 
+the front-end much more. I find this part of any application the most time consuming and 
+requiring the most proficieny and attention to the Android SDK and it's changes over time. 
+
