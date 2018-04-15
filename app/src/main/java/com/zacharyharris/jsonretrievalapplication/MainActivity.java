@@ -99,12 +99,6 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setAdapter(mAdapter);
         mAdapter.notifyDataSetChanged();
 
-        /*nameTextView = findViewById(R.id.name_textView);
-        cityTextView = findViewById(R.id.city_textView);
-        stateTextView = findViewById(R.id.state_textView);
-        endDateTextView = findViewById(R.id.endDate_textView);
-        iconView = findViewById(R.id.imageView);*/
-
         objectList = new ArrayList<>();
 
         // call the json retrieval
@@ -146,15 +140,15 @@ public class MainActivity extends AppCompatActivity {
                         JSONObject venueKey = currObj.getJSONObject("venue");
                         String name = currObj.getString("name");
                         /*String city = venueKey.getString("city");
-                        String state = venueKey.getString("state");*/
+                        String state = venueKey.getString("state"); */
                         String endDate = currObj.getString("endDate");
                         String photoURL = currObj.getString("icon");
                         Log.e(TAG, name);
 
                         Object object = new Object();
                         object.setName(name);
-                        //object.setCity(city);
-                        //object.setState(state);
+                        /*object.setCity(city);
+                        object.setState(state);*/
                         object.setEndDate(endDate);
                         object.setPhotoURL(photoURL);
 
@@ -193,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
-            // Dismiss the progress dialog
+            // dismiss the progress dialog
             if (pDialog.isShowing())
                 pDialog.dismiss();
 
